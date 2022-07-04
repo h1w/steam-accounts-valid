@@ -8,6 +8,7 @@ import urllib3
 import optparse
 import json
 import time
+
 import threading
 import signal
 import sys
@@ -51,7 +52,7 @@ steamaccounts = []
 
 def GetProxyFromFile(proxyfile_abspath):
     with open(proxyfile_abspath, 'r') as f:
-        _proxylist = f.read().split('\n')
+        _proxylist = [proxy.split(' ')[0] for proxy in f.read().split('\n')]
         f.close()
     return _proxylist
 
@@ -71,9 +72,10 @@ def GetSteamAccounts(steamaccounts_abspath):
 main_thread_alive = True
 def Main():
     while main_thread_alive:
-        print(len(proxylist))
-        print(len(steamaccounts))
-        time.sleep(1)
+        # print(len(proxylist))
+        # print(len(steamaccounts))
+        # time.sleep(1)
+        pass
 
 parser.add_option(
     '-p', '--proxy',
