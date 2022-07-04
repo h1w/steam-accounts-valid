@@ -3,3 +3,7 @@ __pycache__
 proxylist.txt
 steamaccounts.txt
 steam-checker.log
+steam-accounts-checker.log
+users-info
+data.db
+secret_credentials.py
